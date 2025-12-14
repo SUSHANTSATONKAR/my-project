@@ -1,0 +1,126 @@
+/* --- 1. Global Reset and Base Styles --- */
+
+/* Use box-sizing for easier layout calculations (border and padding are included in the element's total width/height) */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif; /* Using the font linked in index.html */
+    line-height: 1.6; /* Improved readability */
+    background-color: #f4f4f9; /* Very light gray background */
+    color: #333; /* Dark gray text color */
+}
+
+/* --- 2. Layout and Container --- */
+
+/* Centralize the main content and limit its width for readability */
+main {
+    max-width: 1000px;
+    margin: 20px auto; /* 20px top/bottom, auto left/right for centering */
+    padding: 0 20px; /* Padding on the sides for smaller screens */
+}
+
+/* --- 3. Header and Navigation (Nav) Styling --- */
+
+header {
+    background-color: #007bff; /* Primary blue color */
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+header h1 {
+    margin-bottom: 0.5rem;
+}
+
+nav ul {
+    list-style: none; /* Remove bullet points */
+    display: flex;
+    justify-content: center; /* Center the list items horizontally */
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none; /* Remove underline from links */
+    font-weight: 500;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* --- 4. Section and Article Styling --- */
+
+section, article {
+    background-color: white;
+    padding: 30px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+h2, h3 {
+    color: #007bff;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #e9ecef; /* Light gray line under headers */
+    padding-bottom: 5px;
+}
+
+/* Styling for unordered lists inside sections/articles */
+section ul {
+    list-style: square;
+    margin-left: 20px;
+}
+
+section ul li {
+    margin-bottom: 8px;
+}
+
+/* --- 5. Footer Styling --- */
+
+footer {
+    background-color: #333; /* Dark background */
+    color: #fff; /* White text */
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 30px;
+}
+
+footer p {
+    margin: 5px 0;
+    font-size: 0.9em;
+}
+
+/* --- 6. Media Queries (For Responsiveness) --- */
+
+/* Apply these styles when the screen width is 600px or less (mobile first approach) */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack navigation links vertically */
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 5px 0; /* Add vertical space between stacked links */
+    }
+
+    section, article {
+        padding: 20px;
+    }
+}
